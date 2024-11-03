@@ -1,3 +1,5 @@
+var newMessage="Failed to fetch xml document";
+
 function tickerSizeAndPosition() {
     var e = "ticker";
     document.getElementById(e).style.height = parseInt(document.getElementById("information").style.height) + "px", document.getElementById(e).style.width = stageWidth + "px", document.getElementById(e).style.left = "0px", document.getElementById(e).style.top = stageHeight - parseInt(document.getElementById(e).style.height) + "px", 100 < parseInt(document.getElementById(e).style.height) && (document.getElementById(e).style.height = "100px", document.getElementById(e).style.width = stageWidth + "px", document.getElementById(e).style.left = "0px", document.getElementById(e).style.top = stageHeight - parseInt(document.getElementById(e).style.height) + "px");
