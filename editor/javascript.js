@@ -176,6 +176,7 @@ function xmlString(e) {
 
 function loadTickerData() {
     document.getElementById("tickerEditorTextField").value = "", editortickerxmlhttp = new XMLHttpRequest, randomCacheNumber = Math.floor(999999999 * Math.random() + 1), editortickerxmlhttp.open("GET", "ticker/messages.xml?" + randomCacheNumber, !0), editortickerxmlhttp.send(), editortickerxmlhttp.onreadystatechange = function() {
+        4 == editortickerxmlhttp.readyState && editortickerxmlhttp.responseXML!=null
         4 == editortickerxmlhttp.readyState && (xmlDocument = editortickerxmlhttp.responseXML, newMessage = xmlDocument.getElementsByTagName("message")[0].childNodes[0].nodeValue, document.getElementById("tickerEditorTextField").value = newMessage)
     }
 }
