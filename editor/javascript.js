@@ -175,6 +175,7 @@ function loadTickerData() {
     editortickerxmlhttp.open("GET", "ticker/messages.xml?" + randomCacheNumber, !0);
     editortickerxmlhttp.send();
     editortickerxmlhttp.onreadystatechange = function() {
+        4 == editortickerxmlhttp.readyState && editortickerxmlhttp.responseXML!=null
         4 == editortickerxmlhttp.readyState && (xmlDocument = editortickerxmlhttp.responseXML, newMessage = xmlDocument.getElementsByTagName("message")[0].childNodes[0].nodeValue, document.getElementById("tickerEditorTextField").value = newMessage)
     }
 }
