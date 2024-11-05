@@ -1,3 +1,5 @@
+var newMessage="Failed to fetch xml document";
+
 function tickerSizeAndPosition() {
     var e = "ticker",
         t = 0;
